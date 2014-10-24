@@ -1,0 +1,310 @@
+<!--
+- Is there anything in bootstrap already for ".section-header"?
+- how should I be using <section> tags?
+- how can I group elements like day / month / year?
+- Also, the way I group elements means I can't use .col-sm-1
+- how do I display a "€" (euro) symbol?
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bloom</title>
+  <!-- Adds Bootswatch CSS  -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/flatly/bootstrap.min.css">
+
+  <!-- Adds Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <!-- Adds your custom styles -->
+  <link rel="stylesheet" type="text/css" href="css/my_styles.css">
+
+  <!-- Adds Bootstrap Javascript -->
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="bloom_landing.html">Bloom</a>
+      </div>
+
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+
+    <div class="page-header">
+      <h3>Sign up for a personal account</h3>
+    </div>
+
+    <div class="row">
+
+      <!-- Signup panel -->
+      <div class="col-md-8">
+        <div class="panel panel-default" id="signup-form">
+
+          <!-- <div class="panel-heading"> -->
+          <!-- </div> -->
+          <div class="panel-body">
+            <legend>Tell us about yourself</legend>
+
+            <!-- 1. Basic user info form -->
+            <section class="input-section">
+              <div class="input-header text-info">
+                <h5>1. Information to establish your account</h5>
+              </div>
+              <form class="form-horizontal" role="form">
+
+                <!-- How do I group multiple fields into one object? -->
+                <div class="form-group">
+                  <label for="firstname" class="col-sm-3 control-label">Name</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="firstname" placeholder="Fist">
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="lastname" placeholder="Last">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="col-sm-3 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="dateofbirh" class="col-sm-3 control-label">Date of birth</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="dobday" placeholder="D">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="dobmonth" placeholder="M">
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="dobyear" placeholder="Y">
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                  <label for="street1" class="col-sm-3 control-label">Address line 1</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="street1" placeholder="Street address">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="street2" class="col-sm-3 control-label">Address line 2</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="street2" placeholder="Address complement (Optional)">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="postcode" class="col-sm-3 control-label">Post code</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="postcode" placeholder="00000">
+                  </div>
+                  <label for="city" class="col-sm-1 control-label">City</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="city" placeholder="">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="col-sm-3 control-label">Phone</label>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" id="phone" placeholder="">
+                  </div>
+                </div>
+
+              </form>
+            </section>
+
+
+            <!-- 2. Financial info form -->
+            <section class="input-section">
+              <div class="input-header text-info">
+                <h5>2. Financial Background</h5>
+              </div>
+              <form class="form-horizontal" role="form">
+
+                <div class="form-group">
+                  <!-- Do I need to use a 'for' here given the 'select' input type? -->
+                  <label for="employment" class="col-sm-3 control-label">Emploment status</label>
+                  <div class="col-sm-4">
+                    <select class="form-control">
+                    <option>Please select</option>
+                      <option>Employed (full-time)</option>
+                      <option>Employed (part-time)</option>
+                      <option>Self employed</option>
+                      <option>Student</option>
+                      <option>Retired</option>
+                      <option>Unemployed</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="income" class="col-sm-3 control-label">Income</label>
+                  <div class="col-sm-3">
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control" id="income" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="networth" class="col-sm-3 control-label">Net worth</label>
+                  <div class="col-sm-3">
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control" id="networth" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </section>
+
+
+            <!-- 3. Goal definition form -->
+            <section class="input-section">
+              <div class="input-header text-info">
+                <h5>3. Information to create your first goal</h5>
+              </div>
+              <form class="form-horizontal" role="form">
+
+                <div class="form-group">
+                  <label for="goaltype" class="col-sm-3 control-label">Goal type</label>
+                  <div class="col-sm-4">
+                    <select class="form-control">
+                    <option>Please select</option>
+                      <option>House</option>
+                      <option>Retirement</option>
+                      <option>Build wealth</option>
+                      <option>Education</option>
+                      <option>Safety net</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="goalyears" class="col-sm-3 control-label">Years until goal</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="goaltype" placeholder="">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="savings" class="col-sm-3 control-label">Monthly savings</label>
+                  <div class="col-sm-3">
+                    <div class="input-group">
+                      <span class="input-group-addon">$</span>
+                      <input type="text" class="form-control" id="savings" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </section>
+
+
+            <!-- 4. Terms agreement form -->
+            <section class="">
+              <form class="form-horizontal" role="form">
+
+                <div class="form-group">
+                  <div class="col-sm-offset-1 col-sm-10">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> By checking this box, you acknowledge that you have read and agree to the terms below.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-offset-1 col-sm-10">
+                    <div class="well well-sm legal-terms">
+                      <p>Lorem ipsum dolor sit amet, ex semper inermis nam, nobis fabulas his an. Prima novum sea ut. Ad aliquid abhorreant pri, in ius eros regione patrioque, id has augue ignota fabellas. Malorum persequeris quo ea, te porro dicam vim. Quod appetere accommodare vix cu.</p>
+
+                      <p>Exerci percipitur dissentias his ne. Hinc epicurei gubergren te pri. Lucilius molestiae te mei. Ea porro oblique sed, vidisse oblique malorum eos an, malorum dissentiet definitiones ut vix.</p>
+
+                      <p>Erant accusata at cum, dicam appellantur et per. Qui ad vide admodum, id pri unum tritani nominati. Mel debet nemore ei. Ei nostro tacimates voluptatibus pro. Quo te causae scaevola, ex vim homero audiam.</p>
+
+                      <p>Quo docendi singulis scripserit ei. Iuvaret ponderum fabellas eum ad. Eripuit ocurreret sed ea. Cum semper oblique an, wisi nonumy nominati ad duo, quo ut essent propriae placerat. Mel cu cetero constituto, ea eam appetere verterem inimicus, mei clita alienum mentitum ut. Duo homero verterem deseruisse id, eum dictas assueverit cu, nam ei vide mollis atomorum.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-offset-1 col-sm-3">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </div>
+                </div>
+
+              </form>
+            </section>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <legend>Questions? Talk to us.</legend>
+
+            <div class="media">
+              <img class="pull-left thumbnail" src="contact_thumb.jpg" alt="Contact photo">
+              <div class="media-body">
+                <h4 class="media-heading">Talk to one of our product specialists, like Guillaume.</h4>
+              </div>
+            </div>
+
+            <h4>
+              <i class="fa fa-phone"></i>
+              &emsp;+1 (312) 509-1213
+            </h4>
+            <h4>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:support@bloom.fr">&emsp;support@bloom.fr</a>
+            </h4>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</body>
+</html>
